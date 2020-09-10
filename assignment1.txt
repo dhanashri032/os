@@ -1,0 +1,428 @@
+Assignment 1
+_______________________________________________________________________________________________________________
+Q1. Explore the following commands with various options, refer man pages for 
+    further help 
+	
+a) date 
+
+	date +%a
+	
+	date +%A
+
+	date +%b
+	
+	date +%B
+	
+	date +%d
+	
+	date +%D
+	
+	date +%F
+	
+	date +%T
+
+	date +%Y
+	
+b) cal 
+
+	cal 2020
+	
+	cal jan 2020
+
+c) bc 
+
+	bc 1.07.1
+	Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+	This is free software with ABSOLUTELY NO WARRANTY.
+	For details type `warranty'.
+
+d) echo 
+
+	/bin/bash
+
+e) who 
+
+
+f) whoami 
+
+	root
+
+g) logname 
+
+		user login name
+
+g) uname 
+
+	linux
+
+h)seq 
+
+	seq 10
+	
+	seq 1 2 10
+	
+	seq 5 20 50
+
+i) clear
+
+	used to clear screen
+_______________________________________________________________________________________________________________
+
+Q2.	
+
+A) Create three directory a b and c and create a.txt,b.txt and c.txt in each directory respectively and then 
+copy c directory into the a.
+
+mkdir dira dirb dirc
+
+cd dira
+   cat > a.txt
+   cat > b.txt
+   cat > c.txt
+   cd ..
+   
+cd dirb
+   cat > a.txt
+   cat > b.txt
+   cat > c.txt
+    cd ..
+   
+cd dirc
+   cat > a.txt
+   cat > b.txt
+   cat > c.txt
+   cd ..
+  
+cp dirc dira
+
+B)Move Directory b to c.
+	
+	mv dirb dirc
+
+C)Create alias of ls -lh command to your name.
+
+	alias dhanu = "ls -lh"
+	
+
+D)Change Directory name a to cdac.
+
+	mv dira dircadc
+_______________________________________________________________________________________________________________
+
+Q3. 
+
+A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and file5.txt with some text inside it. 
+Search for 's' character inside all the files using grep command. Also Use cat to view all file content together.
+	
+	cat > file1.txt
+		hello cdac
+	
+	cat > file2.txt
+			Kharghar
+	
+	cat >file3.txt
+			CDAC Mumbai
+	
+	cat > file4.txt
+			Operating System
+	
+	cat >file5.txt
+			Welcome to PG-DAC
+			
+	grep 's' file?.txt
+	cat f*
+	
+B)Create file.txt using cat and edit that using nano editor.
+	
+	nano file.txt
+	
+c)Create 5 empty files using touch command
+	
+	touch 1.txt 2.txt 3.txt 4.txt 5.txt
+	
+D)Remove previously created directory a , b and c.
+
+	rm -r dira dirb dirc	
+_______________________________________________________________________________________________________________
+
+Q4. Create a file with some content using vi editor
+	
+	vi file1.sh
+	
+a) Display the file using cat command
+	
+	cat file1.sh
+	
+b) Display line numbers along with content
+
+	cat -n f1.sh
+
+c) Display the file in reverse order using tac
+
+	ls -r
+
+d) Combine multiple files using cat command
+
+	cat file1.txt file2.txt file3.txt >file.txt
+
+_______________________________________________________________________________________________________________
+
+Q5. Create Random some files and sub directories.
+	
+a) display files row wise, column wise, 1 per row
+	
+	cat > col.txt
+	a
+	b
+	c
+	d
+	cat col.txt
+	column col.txt
+	
+	
+b) sort the files in ascending, descending order
+	
+	sort name.txt
+    sort -r name.txt	
+	
+c) Create some hidden files and sub directories and display them using “ls -a”
+
+	cat > .h2.txt
+	mkdir .h2
+	ls -a
+
+d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+
+	touch -a a.txt
+	touch -c -d a.txt
+
+e) Recursive display contents of your home directory.
+	
+	ls -r	
+	
+f) display all attributes of files and directories using ls -l
+	
+	ls -l	
+	
+g) display attributes of a directory using ls -ld
+
+	ls -ld a
+
+_______________________________________________________________________________________________________________
+
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+
+=>mkdir dhanashri
+  cd dhanashri
+  touch a.txt b.txt c.txt d.sh
+  chmod 110 a.txt b.txt
+  chmod 010 c.txt
+  chmod 001 d.sh
+
+_______________________________________________________________________________________________________________
+
+Q2. Change the permission of the previous directory to executable only. Analyze the output.
+
+	chmod 001 dhanashri
+_______________________________________________________________________________________________________________
+
+Q3. Change the permission of the previous directory to read only. Analyze the output.
+
+	chmod 100 dhanashri
+_______________________________________________________________________________________________________________
+
+Q4. Use echo to list the all files of your home directory.
+
+	echo *
+_______________________________________________________________________________________________________________
+
+Q5. Use echo to list the all files of /etc/ directory.
+
+	cd /etc
+	echo *
+_______________________________________________________________________________________________________________
+
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+
+	cd /etc
+	echo *.conf
+_______________________________________________________________________________________________________________
+
+Q7. Use echo to append your name to a.txt
+
+	echo 'append successfull'>>a.txt
+_______________________________________________________________________________________________________________
+
+1.	Create Three level nested directory a,b and c
+
+ mkdir a b c
+ 
+ mv b c a
+ 
+ mv c b
+ 
+a)Create at least one hidden file in each directory
+
+	mkdir c
+		cat > .a
+	
+	mkdir b
+		cat > .a
+		
+	mkdir a
+		cat > .a
+	
+
+b)Create at least one normal text file in each directory
+
+	mkdir a
+		cat > a.txt
+		
+	mkdir b
+		cat > a.txt
+		
+	mkdir c
+		cat > a.txt
+
+
+c)Copy c into a
+
+
+
+d)Copy file inside a into b
+
+
+_______________________________________________________________________________________________________________
+
+2.	Change the third level directory c permission to read only
+
+	cp -r ../a/b/c ../a
+_______________________________________________________________________________________________________________
+
+3.	Try copying third level c directory to outside of a
+
+	cp -r location of source location of destination
+_______________________________________________________________________________________________________________
+
+4.	Create the directory  “data“ inside b
+
+	cd b
+		mkdir data
+_______________________________________________________________________________________________________________
+
+5.	Change the permission of b to read and write only
+
+	chmod 110 b
+_______________________________________________________________________________________________________________
+
+6.	Create directory “data2”  inside b
+
+	cd b
+		mkdir data2
+_______________________________________________________________________________________________________________
+
+7.	Create data.txt file inside b
+
+	cd b
+		cat > data.txt
+_______________________________________________________________________________________________________________
+
+8.	Rename the second level directory c to copied_dir
+
+	mv c copied_dir
+_______________________________________________________________________________________________________________
+
+9.	Change permission of copied_dir to only executable
+
+	chmod 001 copied_dir
+_______________________________________________________________________________________________________________
+
+10.	Try ls on copied_dir
+
+	ls
+_______________________________________________________________________________________________________________
+
+11.	Try moving copied_dir to outside of a
+
+	mv ../copied_dir destination location
+_______________________________________________________________________________________________________________
+
+12.	Try moving data directory outside of a
+
+	mv source destination location
+_______________________________________________________________________________________________________________
+
+13.	Now change the owner of the directory a to root
+
+	
+_______________________________________________________________________________________________________________
+
+14.	Change permission of a to read write and executable to only user
+
+	chmod 700 a
+_______________________________________________________________________________________________________________
+
+15.	Try creating directory sample inside a
+
+	cd a
+		mkdir sample
+_______________________________________________________________________________________________________________
+
+16.	Create directory x outside a
+
+	mkdir x
+_______________________________________________________________________________________________________________
+
+17.	Try moving x inside a
+
+	mv x ../a
+_______________________________________________________________________________________________________________
+
+18.	Create directory movies
+
+	mkdir movies
+_______________________________________________________________________________________________________________
+
+19.	Change group of movies to sudo
+
+	chgrp sudo movies
+_______________________________________________________________________________________________________________
+
+20.	Change group of movies to avahi
+
+	chgrp avahi movies
+_______________________________________________________________________________________________________________
+
+21.	Try changing permission after changing ownership to root
+
+	chmod 777 avahi
+_______________________________________________________________________________________________________________
+
+22.	Try Changing permission after changing group to sudo without sudo
+
+	chmod 777 sudo
+_______________________________________________________________________________________________________________
+
+23.	Try Changing owner and group both to root
+
+	chown bin dhanashri
+	chgrp bin dhanashri
+_______________________________________________________________________________________________________________
+
+24.	Try changinging permission
+
+	chmod 777 filename
+_______________________________________________________________________________________________________________
+
+25.	Try deleting the file
+
+	rm a.txt
+_______________________________________________________________________________________________________________
